@@ -1,0 +1,17 @@
+* text=auto
+
+# GitHub Actions YAML and shell scripts must keep LF endings
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.sh    text eol=lf
+project.yml text eol=lf
+
+# Swift sources: LF
+*.swift text eol=lf
+
+# Never touch these
+*.p12        binary
+*.mobileprovision binary
+*.cer        binary
+*.ipa        binary
+*.xcarchive  binary
