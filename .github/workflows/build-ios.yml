@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Show environment
         run: |
@@ -62,7 +62,7 @@ jobs:
           unzip -l MyApp-unsigned.ipa | head -20
 
       - name: Upload .ipa artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: MyApp-unsigned-ipa
           path: build/MyApp-unsigned.ipa
