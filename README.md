@@ -3,6 +3,15 @@
 A SwiftUI iOS app that is built **on a real macOS machine (GitHub Actions runner)** from
 this Windows host. There is no Mac VM involved.
 
+## Quick build
+
+```powershell
+.\build.ps1 -m "describe your change"
+```
+
+That commits, pushes, waits for the workflow, and drops the `.ipa` in `dist\`.
+It takes about 60 seconds end to end. Everything is already configured.
+
 ## How the build works
 
 1. You edit Swift source in `Sources/`.
@@ -19,8 +28,10 @@ You can edit files normally. There is no local Xcode step - the runner does the 
 
 ## Running the workflow
 
-- Push to `main`, or
+- Push to `main` (or just run `.\build.ps1`), or
 - Actions tab -> `Build iOS App` -> **Run workflow**
+
+Workflow runs on a `macos-15` runner and takes roughly 30-40 seconds.
 
 ## The .ipa is unsigned
 
